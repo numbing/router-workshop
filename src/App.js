@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import About from './pageComponent/About'
 import Home from './pageComponent/Home'
+import Profile from './pageComponent/Profile'
 
 import {
   BrowserRouter as Router,
@@ -13,12 +14,13 @@ class App extends Component {
     return (
       <Router>
         <div>
+
+          <Link to='about'>about</Link>
+
           <Switch>
-            <Route path="/" component={Home} />
-            <Route path="/about" component={About} />
-
-
-
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/profile/:potato" component={Profile} />
           </Switch>
 
         </div>
