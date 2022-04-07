@@ -9,7 +9,6 @@ export default class PokemonDetails extends Component {
   }
 
 
-
   componentDidMount() {
     let pokeName = this.props.match.params.pokeName;
 

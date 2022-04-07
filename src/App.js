@@ -16,8 +16,8 @@ class App extends Component {
       <Router>
         <div>
 
-          <Link to='about'>about</Link>
-          <Link to='pokemons'>pokemons</Link>
+          <Link to='/about'>about</Link>
+          <Link to='/pokemons'>pokemons</Link>
 
           <Switch>
             <Route exact path="/" component={Home} />
