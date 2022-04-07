@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 export default class PokemonDetails extends Component {
 
+
   state = {
     pokemon: {},
     loading: true
@@ -10,7 +11,9 @@ export default class PokemonDetails extends Component {
 
 
   componentDidMount() {
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${this.props.match.params.pokeName}`).then(responseFromPokemon => {
+    let pokeName = this.props.match.params.pokeName;
+
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`).then(responseFromPokemon => {
       console.log("responseFromPokemon", responseFromPokemon);
 
       this.setState({
@@ -20,6 +23,7 @@ export default class PokemonDetails extends Component {
       })
     })
   }
+
 
   render() {
     console.log(this.state.pokemon);
