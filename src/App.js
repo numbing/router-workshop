@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import About from './pageComponent/About'
 import Home from './pageComponent/Home'
 import Pokemons from './pageComponent/Pokemons'
+import PokemonDetails from './pageComponent/PokemonDetails'
 
 import {
   BrowserRouter as Router,
@@ -22,6 +23,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/pokemons" component={Pokemons} />
+            <Route exact path="/pokemons/:pokeName" component={PokemonDetails} />
           
           </Switch>
 
